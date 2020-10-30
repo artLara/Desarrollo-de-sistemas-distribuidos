@@ -40,7 +40,8 @@ class Token
 
         nodo = Integer.valueOf(args[0]);  // el primer parametro es el numero de nodo
         ip = args[1];  // el segundo parametro es la IP del siguiente nodo en el anillo
-
+        System.out.println("Iniciado nodo: " + nodo);
+        System.out.println("Direccion IP del siguinte nodo: " + ip);
         //Algoritmo 2
         Worker w = new Worker();
         w.start();
