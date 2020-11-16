@@ -1,5 +1,5 @@
 import java.rmi.RemoteException;
-import java.rmi.Remote;
+import java.rmi.*;
 
 
 public interface InterfaceRMI extends Remote{

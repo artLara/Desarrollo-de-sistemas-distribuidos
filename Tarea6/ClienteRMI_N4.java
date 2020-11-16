@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.rmi.Naming;
 import java.lang.Exception;
 
-public class ClienteRMI{
+public class ClienteRMI_N4{
     static int N = 4;//Tamanio de matrices
     static int[][] A = new int[N][N];//Declaracion dematriz de NxN
     static int[][] B = new int[N][N];//Declaracion dematriz de NxN
