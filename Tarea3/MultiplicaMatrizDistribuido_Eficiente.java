@@ -191,8 +191,8 @@ class MultiplicaMatrizDistribuido_Eficiente{
             // Inicializa las matrices A y B
             for (int i = 0; i < N; i++){
                 for (int j = 0; j < N; j++){
-                    A[i][j] = 2 * i + j;
-                    B[i][j] = 2 * i - j;
+                    A[i][j] = 2 * i - j;
+                    B[i][j] = 2 * i + j;
                     C[i][j] = 0;
                 }
             }

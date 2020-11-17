@@ -2,8 +2,8 @@ import java.io.IOException;
 import java.rmi.Naming;
 import java.lang.Exception;
 
-public class ClienteRMI_N1000{
-    static int N = 1000;//Tamanio de matrices
+public class ClienteRMI_N500{
+    static int N = 500;//Tamanio de matrices
     static int[][] A = new int[N][N];//Declaracion dematriz de NxN
     static int[][] B = new int[N][N];//Declaracion dematriz de NxN
     static int[][] C = new int[N][N];//Declaracion dematriz de NxN
@@ -12,6 +12,10 @@ public class ClienteRMI_N1000{
     public static void main(String args[]) throws Exception{
         String[] urls = crearUrls(args);
 
+        System.out.println("Urls:");
+        for(String url : urls){
+            System.out.println(url);
+        }
         //Obtiene una referencia que "apunta" al objeto remoto asociado a la URL
         InterfaceRMI r1 = (InterfaceRMI)Naming.lookup(urls[0]);
         InterfaceRMI r2 = (InterfaceRMI)Naming.lookup(urls[1]);
@@ -47,8 +51,6 @@ public class ClienteRMI_N1000{
 
         if(N == 4){
             imprimirResultados();
-            //System.out.println("Matriz B sin transpuesta");
-            //imprimirMatriz(B);
         }
         
         System.out.println("Checksum="+calcularChecksum(C));
@@ -109,7 +111,7 @@ public class ClienteRMI_N1000{
     }
 
     static String[] crearUrls(String args[]){
-        String[] urls = new String[4];
+        String[] urls = new String[3];
 
         //Cuando se desea utilizar en localhost y tener multiples servidores
         //se agrega un identificador al nombre que en este caso es un entero
