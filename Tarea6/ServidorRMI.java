@@ -28,7 +28,7 @@ public class ServidorRMI{
         System.out.println("Url: " + url);
         ClaseRMI obj = new ClaseRMI();
         // registra la instancia en el rmiregistry
-        Naming.rebind(url,obj);
+        Naming.bind(url,obj);
         System.out.println("Servidor "+ args[0] +" iniciado con exito!");
     }
 
