@@ -18,6 +18,10 @@ public class ClienteRMI_N4{
         }
 
         //Obtiene una referencia que "apunta" al objeto remoto asociado a la URL
+        //Dado a que el servidor 0 se ejecuta en el mismo nodo que el cliene
+        //su url se mantiene constante en localhost
+
+        InterfaceRMI r0 = (InterfaceRMI)Naming.lookup("rmi://localhost/multiplicaMatriz0");
         InterfaceRMI r1 = (InterfaceRMI)Naming.lookup(urls[0]);
         InterfaceRMI r2 = (InterfaceRMI)Naming.lookup(urls[1]);
         InterfaceRMI r3 = (InterfaceRMI)Naming.lookup(urls[2]);
@@ -35,12 +39,8 @@ public class ClienteRMI_N4{
         int[][] B1 = parte_matriz(B,0);
         int[][] B2 = parte_matriz(B,N/2);
 
-        //Instanciamos a un objeto ClaseRMI para que el cliente ejecute
-        //el metodo multiplica_matrices de A1 x B1
-        ClaseRMI objCliente = new ClaseRMI();
-        
         //Objetenemos la multiplicación de matrices
-        int[][] C1 = objCliente.multiplica_matrices(A1,B1);
+        int[][] C1 = r0.multiplica_matrices(A1,B1);
         int[][] C2 = r1.multiplica_matrices(A1,B2);
         int[][] C3 = r2.multiplica_matrices(A2,B1);
         int[][] C4 = r3.multiplica_matrices(A2,B2);
