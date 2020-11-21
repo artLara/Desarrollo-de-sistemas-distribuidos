@@ -135,8 +135,8 @@ public class ClienteRMI_N4{
         } catch (Exception e) {
             //TODO: handle exception
             System.err.println("Uso:");
-            System.err.println("java ClienteRMI <ip de server 1> <ip de server 2> <ip de server 3>");
-            System.err.println("java ClienteRMI (para uso en localhost con nodo 1, 2 y 3)");
+            System.err.println("java ClienteRMI <ip Server1><ip Server2> <ip Server3>");
+            System.err.println("java ClienteRMI(para uso en localhost con nodo 1, 2 y 3)");
             System.exit(0);
         }
 

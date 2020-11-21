@@ -16,10 +16,16 @@ public class ClienteRMI_N500{
         for(String url : urls){
             System.out.println(url);
         }
+
         //Obtiene una referencia que "apunta" al objeto remoto asociado a la URL
+        //Dado a que el servidor 0 se ejecuta en el mismo nodo que el cliene
+        //su url se mantiene constante en localhost
+
+        InterfaceRMI r0 = (InterfaceRMI)Naming.lookup("rmi://localhost/multiplicaMatriz0");
         InterfaceRMI r1 = (InterfaceRMI)Naming.lookup(urls[0]);
         InterfaceRMI r2 = (InterfaceRMI)Naming.lookup(urls[1]);
         InterfaceRMI r3 = (InterfaceRMI)Naming.lookup(urls[2]);
+
 
         //Inicializamos las matrices
         inicializaMatrices();
@@ -134,8 +140,8 @@ public class ClienteRMI_N500{
         } catch (Exception e) {
             //TODO: handle exception
             System.err.println("Uso:");
-            System.err.println("java ClienteRMI <ip de server 1> <ip de server 2> <ip de server 3>");
-            System.err.println("java ClienteRMI (para uso en localhost con nodo 1, 2 y 3)");
+            System.err.println("java ClienteRMI <ip Server1><ip Server2> <ip Server3>");
+            System.err.println("java ClienteRMI(para uso en localhost con nodo 1, 2 y 3)");
             System.exit(0);
         }
 
