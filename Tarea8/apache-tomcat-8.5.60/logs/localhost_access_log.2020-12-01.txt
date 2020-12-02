@@ -1,0 +1,4 @@
+127.0.0.1 - - [01/Dec/2020:21:37:58 -0600] "POST /Servicio/rest/ws/consulta HTTP/1.1" 200 152
+127.0.0.1 - - [01/Dec/2020:21:38:10 -0600] "POST /Servicio/rest/ws/alta HTTP/1.1" 400 116
+127.0.0.1 - - [01/Dec/2020:21:46:37 -0600] "POST /Servicio/rest/ws/alta HTTP/1.1" 400 115
+127.0.0.1 - - [01/Dec/2020:21:47:41 -0600] "POST /Servicio/rest/ws/alta HTTP/1.1" 400 115
