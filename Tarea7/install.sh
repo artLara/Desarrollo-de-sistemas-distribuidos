@@ -1,6 +1,7 @@
 #############Instalación de Tomcat con soporte REST
 sudo apt update
 sudo apt install openjdk-8-jdk-headless
+sudo apt-get install -y unzip
 unzip apache-tomcat-8.5.60.zip
 rm -rf apache-tomcat-8.5.60/webapps
 mkdir apache-tomcat-8.5.60/webapps
