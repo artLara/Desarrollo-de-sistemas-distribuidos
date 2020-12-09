@@ -35,4 +35,3 @@
 09-Dec-2020 10:54:09.067 INFORMACIÓN [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/arturo/Escritorio/Desarrollo-de-sistemas-distribuidos/Tarea8/apache-tomcat-8.5.60/webapps/ROOT] has finished in [1.291] ms
 09-Dec-2020 10:54:09.198 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 09-Dec-2020 10:54:09.213 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in 5101 ms
-Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.

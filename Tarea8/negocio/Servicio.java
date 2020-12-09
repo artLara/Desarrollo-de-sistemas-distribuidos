@@ -60,6 +60,7 @@ public class Servicio
   {
     Connection conexion = pool.getConnection();
 
+
     if (usuario.email == null || usuario.email.equals(""))
       return Response.status(400).entity(j.toJson(new Error("Se debe ingresar el email"))).build();
 
