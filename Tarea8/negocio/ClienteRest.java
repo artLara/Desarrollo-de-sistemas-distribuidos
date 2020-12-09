@@ -15,11 +15,13 @@ import com.google.gson.GsonBuilder;
 public class ClienteRest
 {
     static Gson j = new GsonBuilder().registerTypeAdapter(byte[].class,new AdaptadorGsonBase64()).setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").create();
-
+    static String ip;
     public static void main(String[] args) throws IOException
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String opc = "";
+        ip = args[0];
+        System.out.println("Conectado a " + ip);
 
         while(true){
             System.out.println("\n\nSeleccione una opción:\n" +
@@ -80,7 +82,7 @@ public class ClienteRest
     }
 
     public static void consulta(String email) throws IOException{
-        URL url = new URL("http://localhost:8080/Servicio/rest/ws/consulta");
+        URL url = new URL("http://"+ ip +":8080/Servicio/rest/ws/consulta");
         HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
         conexion.setDoOutput(true);
 
@@ -126,7 +128,7 @@ public class ClienteRest
         String parametros = "usuario=" + URLEncoder.encode(usuarioJSON,"UTF-8");
 
 
-        URL url = new URL("http://localhost:8080/Servicio/rest/ws/alta");
+        URL url = new URL("http://"+ ip +":8080/Servicio/rest/ws/alta");
         HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
         conexion.setDoOutput(true);
 
@@ -156,7 +158,7 @@ public class ClienteRest
     }
 
     public static void borrar(String email) throws IOException{
-        URL url = new URL("http://localhost:8080/Servicio/rest/ws/borra");
+        URL url = new URL("http://"+ ip +":8080/Servicio/rest/ws/borra");
         HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
         conexion.setDoOutput(true);
 
@@ -189,7 +191,7 @@ public class ClienteRest
     }
 
     public static void borrar_usuarios() throws IOException{
-        URL url = new URL("http://localhost:8080/Servicio/rest/ws/borrar_usuarios");
+        URL url = new URL("http://"+ ip +":8080/Servicio/rest/ws/borrar_usuarios");
         HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
         conexion.setDoOutput(true);
 
