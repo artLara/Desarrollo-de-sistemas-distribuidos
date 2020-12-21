@@ -1,3 +1,3 @@
 export CATALINA_HOME=$(pwd)/apache-tomcat-8.5.60
 javac -cp negocio/gson-2.3.1.jar:. negocio/ClienteRest.java
-java -cp negocio/gson-2.3.1.jar:. negocio/ClienteRest 52.136.112.188
+java -cp negocio/gson-2.3.1.jar:. negocio/ClienteRest 13.65.170.161
